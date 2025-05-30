@@ -1,6 +1,11 @@
 <div class="container mt-4">
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name, label: "Nom de la liste", input_html: { class: 'form-control form-control-sm w-50' }%>
-  <%= f.submit "Créer la liste", class:"btn-submit" %>
-<% end %>
+  <div class="row justify-content-center ">
+    <div class="col-md-6">
+      <%= simple_form_for @list do |f| %>
+        <%= f.input :name, label: "Nom de la liste", input_html: { class: 'form-control' } %>
+        <%= f.input :photo, as: :file, label: "Ajoutez une image", input_html: { class: 'form-control' } %>
+        <%= f.submit "Créer la liste", class: "btn btn-submit mx-auto d-block" %>
+      <% end %>
+    </div>
+  </div>
 </div>

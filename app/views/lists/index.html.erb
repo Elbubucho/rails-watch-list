@@ -8,7 +8,7 @@
     <% @lists.each do |list| %>
         <div class="col-md-4 mb-4">
           <%= link_to list_path(list), class: "text-decoration-none" do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://conwayyao.com/wp-content/uploads/2015/07/Cinema_Banner.jpeg' %>)">
               <h2>
                 <%= list.name %>
               </h2>
