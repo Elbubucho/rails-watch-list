@@ -1,0 +1,17 @@
+.btn-submit {
+  background: antiquewhite;
+  color: #181818 !important; /* Pour un contraste élégant sur fond clair */
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 8px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition:0.2s, color 0.2s;
+
+  &:hover,
+  &:focus {
+    background: #ffe4c4; /* Variante un peu plus claire au survol */
+    color: #232526 !important;
+    text-decoration: none;
+  }
+}
