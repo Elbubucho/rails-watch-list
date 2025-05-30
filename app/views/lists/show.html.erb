@@ -4,8 +4,16 @@
     <div class="col-6 text-center">
       <h2 class="mb-0"><%= @list.name.upcase %></h2>
     </div>
-    <div class="col-3 text-end">
-      <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-submit" %>
+    <div class="col-3 text-center">
+      <h3>Ajoute ton film</h3>
+      <div class="d-flex flex-column align-items-center form">
+        <%= simple_form_for [@list, @bookmark] do |f| %>
+          <%= f.input :comment, label:"Commentaire", input_html: { class: 'form-control'} %>
+          <%= f.association :movie, label: "Film", input_html: { class: 'form-control' } %>
+          <%= f.submit "Ajouter un film", class: "btn-submit" %>
+        <% end %>
+    </div>
+
     </div>
   </div>
 </div>

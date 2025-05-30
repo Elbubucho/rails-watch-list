@@ -1,9 +1,20 @@
 
 <div class="container">
-  <h1>All Movies Lists</h1>
-  <% @lists.each do |list| %>
-    <h2>
-    <%= link_to list.name, list_path(list) %>
-    </h2>
-  <% end %>
+  <div class="container my-4">
+    <h2 class="text-center">Mes listes</h2>
+  </div>
+
+  <div class="row">
+    <% @lists.each do |list| %>
+        <div class="col-md-4 mb-4">
+          <%= link_to list_path(list), class: "text-decoration-none" do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+              <h2>
+                <%= list.name %>
+              </h2>
+            </div>
+          <% end %>
+        </div>
+    <% end %>
+  </div>
 </div>

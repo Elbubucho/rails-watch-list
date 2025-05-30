@@ -1,0 +1,21 @@
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+    h2 {
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
+      color: antiquewhite;
+    }
+    &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 32px rgba(255,255,255,0.2);
+  }
+}
