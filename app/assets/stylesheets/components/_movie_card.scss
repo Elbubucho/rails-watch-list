@@ -4,9 +4,13 @@
   overflow: hidden;
   color:antiquewhite;
   background: linear-gradient(to top,rgba(20, 20, 20, 0.85) 65%, rgba(20, 20, 20, 0.3) 100%);
-  .card-img-top {
-    height: 450px;
+
+   .movie-poster {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
   }
+
   a {
     text-decoration: none;
   }
